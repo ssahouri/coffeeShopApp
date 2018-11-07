@@ -13,6 +13,7 @@
 <p>User Name: ${ uname }</p>
 <p>Email: ${ email }</p>
 <p>You drink coffee ${ select } times a day</p>
+<h5>Thanks for registering!</h5>
 
 </body>
 </html>

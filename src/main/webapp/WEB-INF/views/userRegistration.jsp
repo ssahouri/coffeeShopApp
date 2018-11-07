@@ -27,10 +27,10 @@ Password: <input type="Password" name = "pword"/>
 <p>How many times a day do you drink coffee?
 <select name = "select">
    <option selected disabled= "disabled">--Select--</option>
-  <option value="0">less than 1</option>
+  <option value="less than 1">less than 1</option>
   <option value="1">1</option>
   <option value="2">2</option>
-  <option value="3">3 or more</option>
+  <option value="3 or more">3 or more</option>
 </select>
 </p>
 <p>
