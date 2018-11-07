@@ -12,6 +12,7 @@
   <h1>GC COFFEE</h1>
   
 </div>
+<div class = "body">
 <br>
 <h2>Welcome to GC Coffee!</h2>
 <p>
@@ -19,7 +20,7 @@
 
 </p>
 
-
+</div>
 
 </body>
 </html>

@@ -12,6 +12,7 @@
   <h1>GC COFFEE</h1>
   
 </div>
+<div class = "body">
 <br>
 <h3>User Registration</h3>
 <form action="/welcome" method="POST">
@@ -42,6 +43,8 @@ Password: <input type="Password" name = "pword"/>
 <p>
 <button>Register</button>
 </p>
+
 </form>
+</div>
 </body>
 </html>

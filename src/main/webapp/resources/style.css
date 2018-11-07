@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 .header {
-    background-color: #F1F1F1;
+    background-color: #E0CBA8;
     text-align: center;
     padding: 20px;
-    color: grey;
+    color: #4C1C00;
 }
 
 h2, h3, h5{
@@ -13,4 +13,8 @@ h2, h3, h5{
 
 p{
 	text-align: center;
+}
+
+.body{
+	back-groundcolor: "";
 }

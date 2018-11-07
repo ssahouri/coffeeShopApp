@@ -13,6 +13,7 @@
   
 </div>
 <br>
+<div class = "body">
 <h2>Welcome, ${ fname }!</h2>
 <h5>Registration Details</h5>
 <p>Name: ${ fname } ${ lname } </p>
@@ -20,6 +21,6 @@
 <p>Email: ${ email }</p>
 <p>You drink coffee ${ select } times a day</p>
 <h5>Thanks for registering!</h5>
-
+</div>
 </body>
 </html>
