@@ -5,9 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome!</title>
+<link rel="stylesheet" href="resources/style.css" />
 </head>
 <body>
-<h1>Welcome, ${ fname }!</h1>
+<div class = "header">
+  <h1>GC COFFEE</h1>
+  
+</div>
+<br>
+<h2>Welcome, ${ fname }!</h2>
 <h5>Registration Details</h5>
 <p>Name: ${ fname } ${ lname } </p>
 <p>User Name: ${ uname }</p>

@@ -5,12 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
+<link rel="stylesheet" href="resources/style.css" />
 </head>
 <body>
-<h1>Welcome to GC Coffee!</h1>
+<div class = "header">
+  <h1>GC COFFEE</h1>
+  
+</div>
+<br>
+<h2>Welcome to GC Coffee!</h2>
 <p>
 <a href="/userRegistration">Click here to register!</a>
+
 </p>
+
+
 
 </body>
 </html>

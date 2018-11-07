@@ -5,8 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>User Registration</title>
+<link rel="stylesheet" href="resources/style.css" />
 </head>
 <body>
+<div class = "header">
+  <h1>GC COFFEE</h1>
+  
+</div>
+<br>
 <h3>User Registration</h3>
 <form action="/welcome" method="POST">
 <p>
