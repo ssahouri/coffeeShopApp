@@ -17,19 +17,19 @@
 <h3>User Registration</h3>
 <form action="/welcome" method="POST">
 <p>
-First Name: <input name = "fname"/>
+First Name: <input name = "fname" required/>
 </p>
 <p>
-Last Name: <input name = "lname"/>
+Last Name: <input name = "lname" required/>
 </p>
 <p>
-User Name: <input name = "uname"/>
+User Name: <input name = "uname" required/>
 </p>
 <p>
-Email: <input type ="Email" name = "email"/>
+Email: <input type ="Email" name = "email" required/>
 </p>
 <p>
-Password: <input type="Password" name = "pword"/>
+Password: <input type="Password" name = "pword" required/>
 </p>
 <p>How many times a day do you drink coffee?
 <select name = "select">
