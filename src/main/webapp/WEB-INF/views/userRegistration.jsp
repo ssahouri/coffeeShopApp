@@ -19,7 +19,10 @@ Last Name: <input name = "lname"/>
 User Name: <input name = "uname"/>
 </p>
 <p>
-Password: <input type="password" name = "pword"/>
+Email: <input type ="Email" name = "email"/>
+</p>
+<p>
+Password: <input type="Password" name = "pword"/>
 </p>
 <p>How many times a day do you drink coffee?
 <select name = "select">

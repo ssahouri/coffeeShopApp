@@ -19,15 +19,15 @@ public class CoffeeShopController {
 	}
 
 	@RequestMapping("/welcome")
-	public ModelAndView showStory(@RequestParam("fname") String fname) {
+	public ModelAndView showStory(@RequestParam("fname") String fname, @RequestParam("lname") String lname,
+			@RequestParam("uname") String uname, @RequestParam("email") String email,
+			@RequestParam("select") String select) {
 		ModelAndView mv = new ModelAndView("welcome");
-		mv.addObject("fname", fname);
-		String lname = null;
-		String uname= null;
 		String pword = null;
-		String select = null;
+		mv.addObject("fname", fname);
 		mv.addObject("lname", lname);
 		mv.addObject("uname", uname);
+		mv.addObject("email", email);
 		mv.addObject("pword", pword);
 		mv.addObject("select", select);
 		return mv;
