@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>User Registration</title>
-<link rel="stylesheet" href="resources/style.css" />
+<link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 <div class = "header">
@@ -17,22 +18,22 @@
 <h3>User Registration</h3>
 <form action="/welcome" method="POST">
 <p>
-First Name: <input name = "fname" required/>
+First Name: <input name = "firstName" required minlength="2" maxlength="12"/>
 </p>
 <p>
-Last Name: <input name = "lname" required/>
+Last Name: <input name = "lastName" required minlength="2" maxlength="20"/>
 </p>
 <p>
-User Name: <input name = "uname" required/>
+User Name: <input name = "username" required minlength="2" maxlength="20"/>
 </p>
 <p>
 Email: <input type ="Email" name = "email" required/>
 </p>
 <p>
-Password: <input type="Password" name = "pword" required/>
+Password: <input type="Password" name = "password" required minlength="8"/>
 </p>
-<p>How many times a day do you drink coffee?
-<select name = "select">
+<p>How many cups of coffee a day do you drink?
+<select name = "cupsPerDay">
    <option selected disabled= "disabled">--Select--</option>
   <option value="less than 1">less than 1</option>
   <option value="1">1</option>
@@ -41,7 +42,7 @@ Password: <input type="Password" name = "pword" required/>
 </select>
 </p>
 <p>
-<button>Register</button>
+<button class="btn btn-dark">Register</button>
 </p>
 
 </form>
