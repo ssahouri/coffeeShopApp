@@ -1,7 +1,10 @@
 package co.grandcircus.coffeeshop;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.servlet.ModelAndView;
@@ -11,9 +14,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CoffeeShopController {
-	
+
 	@Autowired
 	MenuService menuService;
+	
+	@Autowired
+	private UserDao userDao;
+	
+	@Autowired
+	private MenuItemDao menuItemDao;
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -24,26 +33,37 @@ public class CoffeeShopController {
 	public ModelAndView showForm() {
 		return new ModelAndView("userRegistration");
 	}
-	
+
 	@RequestMapping("/welcome")
 	public ModelAndView showUser(User user) {
-	ModelAndView mv = new ModelAndView("welcome");
-	mv.addObject("user", user);
-	return mv;
-}
+		ModelAndView mv = new ModelAndView("welcome");
+		mv.addObject("user", user);
+		return mv;
+	}
 	
-
-	
-	@RequestMapping("/menu")
-	//makes it so you don't have to specify which category
-	public ModelAndView listFood() {
-		ModelAndView mav = new ModelAndView("menu");
-
-			mav.addObject("items", menuService.getAllMenuItems());
-
-		return mav;
+	@PostMapping("/userRegistration")
+	public ModelAndView addSubmit(User user) {		
+		
+		userDao.create(user);
+		return new ModelAndView("redirect:/welcome");
 	}
 
-
+//	@RequestMapping("/menu")
+//	// makes it so you don't have to specify which category
+//	public ModelAndView listFood() {
+//		ModelAndView mav = new ModelAndView("menu");
+//
+//		mav.addObject("items", menuService.getAllMenuItems());
+//
+//		return mav;
+//	}
+	
+	
+	//showing the list of items from the database
+	@RequestMapping("/menu")
+	public ModelAndView list() {
+		List<MenuItem> list = menuItemDao.findAll();
+		return new ModelAndView("menu", "items", list);
+	}
 
 }

@@ -18,10 +18,8 @@
 <h2>Welcome, ${ user.firstName }!</h2>
 <br>
 <h5>Registration Details</h5>
-<p>Name: ${ user.firstName } ${ user.lastName } </p>
+<p>Name: ${ user.first_name } ${ user.last_name } </p>
 <p>User Name: ${ user.username }</p>
-<p>Email: ${ user.email }</p>
-<p>You drink coffee ${ user.cupsPerDay } cup(s) of coffee a day</p>
 <h5>Thanks for registering!</h5>
 </div>
 </body>

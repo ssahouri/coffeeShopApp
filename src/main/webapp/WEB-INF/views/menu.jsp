@@ -35,7 +35,7 @@
 	</tr>
 	<c:forEach var = "item" items="${ items }">
 	<tr>
-	<td>$${ item.price}</td><td>${item.itemName }</td><td>${ item.description}</td>
+	<td>$${ item.price}</td><td>${item.name }</td><td>${ item.description}</td>
 	</tr>
 </c:forEach>
 	</table>
