@@ -16,7 +16,7 @@
 <div class = "body">
 <br>
 <h3>User Registration</h3>
-<form action="/welcome" method="POST">
+<form action="/userRegistration" method="POST">
 <p>
 First Name: <input name = "first_name" required minlength="2" maxlength="12"/>
 </p>

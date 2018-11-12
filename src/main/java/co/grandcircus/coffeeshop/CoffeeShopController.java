@@ -34,18 +34,19 @@ public class CoffeeShopController {
 		return new ModelAndView("userRegistration");
 	}
 
-	@RequestMapping("/welcome")
-	public ModelAndView showUser(User user) {
-		ModelAndView mv = new ModelAndView("welcome");
-		mv.addObject("user", user);
-		return mv;
-	}
+
+//	@RequestMapping("/welcome")
+//	public ModelAndView showUser(User user) {
+//		ModelAndView mv = new ModelAndView("welcome");
+//		mv.addObject("user", user);
+//		return mv;
+//	}
 	
 	@PostMapping("/userRegistration")
 	public ModelAndView addSubmit(User user) {		
 		
 		userDao.create(user);
-		return new ModelAndView("redirect:/welcome");
+		return new ModelAndView("redirect:/");
 	}
 
 //	@RequestMapping("/menu")
