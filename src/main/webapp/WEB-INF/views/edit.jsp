@@ -32,7 +32,7 @@
 			</tr>
 			<tr>
 				<th scope="row">Description</th>
-				<td><input type="text" name="capacity" value="${item.desciption}" />
+				<td><input type="text" name="description" value="${item.description}" />
 				
 				</td>
 			</tr>
