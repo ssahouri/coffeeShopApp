@@ -4,11 +4,15 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 
+
+
 @Repository
+@Transactional
 public class MenuItemDao {
 	
 	
@@ -21,6 +25,9 @@ public class MenuItemDao {
 	
 		return em.createQuery("FROM MenuItem", MenuItem.class ).getResultList();
 	}
+	public MenuItem findById(int id) {
+		return em.find(MenuItem.class, id);
+	}
 	
 	public void update(MenuItem item) {
 		em.merge(item);
@@ -30,7 +37,7 @@ public class MenuItemDao {
 		em.persist(item);
 	}
 	
-	public void delete(MenuItem id) {
+	public void delete(int id) {
 		// Deleting with Hibernate entity manager requires fetching a reference first.
 		MenuItem item = em.getReference(MenuItem.class, id);
 		em.remove(item);

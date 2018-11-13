@@ -35,12 +35,12 @@
 	<tr>
 	<td>$<fmt:formatNumber type = "number" 
          pattern = "##.##" value = "${ item.price}" /></td><td>${item.name }</td><td>${ item.description}</td>
-         <td><a class="btn btn-secondary" href="/edit">Edit</a></td>
-         <td><a class="btn btn-danger" href="/delete">Delete</a></td>
+         <td><a class="btn btn-secondary" href="/edit?id=${item.id }">Edit</a>
+         <a class="btn btn-danger" href="/delete?id=${item.id }">Delete</a></td>
 	</tr>
 </c:forEach>
 	</table>
-	<a href="/rooms/add" class="btn btn-secondary">Add Item</a>
+	<a href="/add" class="btn btn-secondary">Add Item</a>
 </div>
 
 </body>

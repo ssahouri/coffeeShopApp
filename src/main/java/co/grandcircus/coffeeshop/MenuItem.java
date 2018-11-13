@@ -12,7 +12,7 @@ public class MenuItem {
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 
-	private Long id;
+	private int id;
 	private String name;
 	private String description;
 	private double price;
@@ -20,7 +20,7 @@ public class MenuItem {
 	public MenuItem() {
 	}
 
-	public MenuItem(Long id, String name, String description, double price) {
+	public MenuItem(int id, String name, String description, double price) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,7 +32,7 @@ public class MenuItem {
 		return name;
 	}
 
-	public void setItemName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -53,11 +53,11 @@ public class MenuItem {
 
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
