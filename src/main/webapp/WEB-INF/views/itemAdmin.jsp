@@ -9,20 +9,17 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-
 <meta charset="UTF-8">
-<title>Menu</title>
+<title>Item Admin</title>
 <link rel="stylesheet" href="/style.css" />
 </head>
-
 <body>
-
 	<div class="header">
 		<h1>GC COFFEE</h1>
 
 	</div>
 	<div class= "body">
-	<h2>Menu</h2>
+	<h2>Item Admin Menu</h2>
 	
 	<table class="table table-sm">
   <thead class="thead-dark">
@@ -38,9 +35,13 @@
 	<tr>
 	<td>$<fmt:formatNumber type = "number" 
          pattern = "##.##" value = "${ item.price}" /></td><td>${item.name }</td><td>${ item.description}</td>
+         <td><a class="btn btn-secondary" href="/edit">Edit</a></td>
+         <td><a class="btn btn-danger" href="/delete">Delete</a></td>
 	</tr>
 </c:forEach>
 	</table>
+	<a href="/rooms/add" class="btn btn-secondary">Add Item</a>
 </div>
+
 </body>
 </html>

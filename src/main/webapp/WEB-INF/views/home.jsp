@@ -25,6 +25,7 @@
 
 		<a class="btn btn-light" href="/userRegistration" role="button">Click
 			here to register!</a> <a class="btn btn-light" href="/menu" role="button">View
+			Menu!</a> <a class="btn btn-light" href="/itemAdmin" role="button">Admin
 			Menu!</a>
 </div>
 	</div>

@@ -66,5 +66,21 @@ public class CoffeeShopController {
 		List<MenuItem> list = menuItemDao.findAll();
 		return new ModelAndView("menu", "items", list);
 	}
+	
+	@RequestMapping("/itemAdmin")
+	public ModelAndView showItemAdmin() {
+		List<MenuItem> list = menuItemDao.findAll();
+		return new ModelAndView("itemAdmin", "items", list);
+		
+	}
+	@RequestMapping("/edit")
+	public ModelAndView editItem() {
+		return new ModelAndView("edit");
+	}
+	
+	@RequestMapping("/delete")
+	public ModelAndView deleteItem() {
+		return new ModelAndView("delete");
+	}
 
 }
