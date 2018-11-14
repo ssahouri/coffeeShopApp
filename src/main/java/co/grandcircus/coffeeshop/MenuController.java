@@ -44,10 +44,12 @@ public class MenuController {
 
 	// same URL but different method
 	@RequestMapping(value = "/addCartItem", method = RequestMethod.POST)
-	public ModelAndView submitAddCartItem(MenuItem item) {
-		menuItemDao.update(item);
+	public ModelAndView submitAddCartItem(CartItem item) {
+		cartItemDao.create(item);
 		return new ModelAndView("redirect:/cartItem");
 	}
+	
+
 
 	@RequestMapping("/cartItem")
 	public ModelAndView viewCart() {
