@@ -22,31 +22,32 @@
 
 	</div>
 	<div class="body">
-		<h2>Menu</h2>
-
 		<table class="table table-sm">
 			<thead class="thead-dark">
 				<tr>
-					<th scope="col">Price</th>
+					<th scope="col">Quantity</th>
 					<th scope="col">Name</th>
-					<th scope="col">Description</th>
-					<th scope="col">Add to Cart</th>
+					<th scope="col">Price</th>
+					<th scope="col">Subtotal</th>
+					<th scope="col">Delete</th>
 				</tr>
 			</thead>
 			<tr>
 			</tr>
-			<c:forEach var="item" items="${ items }">
+			<c:forEach var="cartItem" items="${ cartItems }">
 				<tr>
-					<td>$<fmt:formatNumber type="number" pattern="##.##"
-							value="${ item.price}" /></td>
-					<td>${item.name }</td>
-					<td>${ item.description}</td>
-					<td><a class="btn btn-danger" href="/cartItem?id=${item.id }">Add
-							to Cart</a></td>
+					<td>${ cartItem.quantity}</td>
+					<td>${cartItem.menuItem.name }</td>
+					<td>$${ cartItem.menuItem.price}</td>
+					<td><jsp:text>
+  						$${cartItem.quantity * cartItem.menuItem.price}
+							</jsp:text></td>
+							<td><a class="btn btn-danger" href="/delete?id=${cartItem.id }">Delete</a></td>
+
 				</tr>
 			</c:forEach>
 		</table>
-		<a class="btn btn-danger" href="/cartItem">View Cart</a>
+		<a class="btn btn-danger" href="/menu">Back to Menu</a>
 	</div>
 </body>
 </html>

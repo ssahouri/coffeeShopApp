@@ -20,6 +20,9 @@ public class CoffeeShopController {
 
 	@Autowired
 	private UserDao userDao;
+	
+	@Autowired
+	private CartItemDao cartItemDao;
 
 	@Autowired
 	private MenuItemDao menuItemDao;
@@ -94,6 +97,18 @@ public class CoffeeShopController {
 	public ModelAndView delete(@RequestParam("id") int id) {
 		menuItemDao.delete(id);
 		return new ModelAndView("redirect:/itemAdmin");
+	}
+	
+//	@RequestMapping("/delete")
+//	public ModelAndView deleteCartItem(@RequestParam("id") Long id) {
+//		cartItemDao.delete(id);
+//		return new ModelAndView("redirect:/cartItem");
+//	}
+	
+	@RequestMapping("/cartItem")
+	public ModelAndView viewCart() {
+		List<CartItem> list = cartItemDao.findAll();
+		return new ModelAndView("cartItem", "cartItems", list);
 	}
 
 }
