@@ -42,6 +42,7 @@
 </c:forEach>
 	</table>
 	<a href="/add" class="btn btn-secondary">Add Item</a>
+	<a href="/" class="btn btn-secondary">Home</a>
 </div>
 
 </body>

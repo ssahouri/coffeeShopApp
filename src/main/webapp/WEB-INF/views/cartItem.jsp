@@ -38,7 +38,8 @@
 				<tr>
 					<td>${ cartItem.quantity}</td>
 					<td>${cartItem.menuItem.name }</td>
-					<td>$${ cartItem.menuItem.price}</td>
+					<td>$<fmt:formatNumber type="number" pattern="##.##"
+							value="${ cartItem.menuItem.price}"/></td>
 					<td><jsp:text>
   						$${cartItem.quantity * cartItem.menuItem.price}
 							</jsp:text></td>

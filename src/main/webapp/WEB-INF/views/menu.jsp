@@ -41,7 +41,7 @@
 							value="${ item.price}" /></td>
 					<td>${item.name }</td>
 					<td>${ item.description}</td>
-					<td><a class="btn btn-danger" href="/cartItem?id=${item.id }">Add
+					<td><a class="btn btn-danger" href="/addCartItem?id=${item.id }">Add
 							to Cart</a></td>
 				</tr>
 			</c:forEach>
