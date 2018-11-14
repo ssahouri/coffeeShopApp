@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
+
 @Controller
 public class CoffeeShopController {
 
@@ -72,12 +74,13 @@ public class CoffeeShopController {
 	}
 
 
-	@RequestMapping("edit")
+	@RequestMapping("/edit")
 	public ModelAndView showEditForm(@RequestParam("id") int id) {
 		ModelAndView mav = new ModelAndView("edit");
 		mav.addObject("item", menuItemDao.findById(id));
-		mav.addObject("title", "Edit Food");
+		mav.addObject("title", "Edit Item");
 		return mav;
+
 	}
 
 	// same URL but different method

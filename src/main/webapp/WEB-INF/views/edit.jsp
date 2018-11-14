@@ -20,15 +20,15 @@
 	</div>
 	<div class="container">
 		<h1>Edit Menu Item</h1>
-		<form action="/edit" method="post">
+		<form action="/edit?id=${item.id }" method="post">
 		<table class="table">
 			<tr>
 				<th scope="row">Price</th>
-				<td><input type="number" name="name" value="${item.price}" /></td>
+				<td><input type="number" name="price" value="${item.price}" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Name</th>
-				<td><input type="text" name="capacity" value="${item.name}" /></td>
+				<td><input type="text" name="name" value="${item.name}" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Description</th>
