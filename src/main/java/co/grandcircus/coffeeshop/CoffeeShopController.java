@@ -44,7 +44,7 @@ public class CoffeeShopController {
 	@PostMapping("/userRegistration")
 	public ModelAndView addSubmit(User user) {
 
-		userDao.create(user);
+		userDao.createUser(user);
 		return new ModelAndView("redirect:/");
 	}
 
