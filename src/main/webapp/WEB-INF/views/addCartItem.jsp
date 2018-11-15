@@ -12,15 +12,16 @@
 <meta charset="UTF-8">
 <title>Edit</title>
 <link rel="stylesheet" href="/style.css" />
-<span>
-			Hello ${ profile.first_name } ${ profile.last_name }
-		</span>
+
 </head>
 <body>
-	<div class="header">
+	<div class="headz">
 		<h1>GC COFFEE</h1>
 
 	</div>
+	<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
 	<div class="container">
 		<h1>Add Item to Cart</h1>
 		<form action="/addCartItem?id=${item.id }" method="post">

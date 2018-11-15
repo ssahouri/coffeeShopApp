@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-<div class = "header">
+<div class = "headz">
   <h1>GC COFFEE</h1>
   
 </div>
+
 <h1>Login</h1>
 	
 	<p class="message">${ message }</p>

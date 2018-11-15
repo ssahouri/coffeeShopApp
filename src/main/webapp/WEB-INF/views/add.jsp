@@ -12,14 +12,17 @@
 <meta charset="UTF-8">
 <title>Delete</title>
 <link rel="stylesheet" href="/style.css" />
-<span>
-			Hello ${ profile.first_name } ${ profile.last_name }
-		</span>
+
 </head>
-	<div class="header">
+	<div class="headz">
 		<h1>GC COFFEE</h1>
+		
+		
 
 	</div>
+	<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
 <body>
 <div class="container">
 		<h2>Add an Item</h2>

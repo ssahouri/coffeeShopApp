@@ -3,23 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<meta charset="UTF-8">
+
 <title>Home</title>
-<link rel="stylesheet" href="/style.css" />
-	<span>
-			Hello ${ profile.first_name } ${ profile.last_name }
-		</span>
+
+
 </head>
 <body>
-
-	<div class="header">
+	<div class="headz">
 		<h1>GC COFFEE</h1>
+		
 
 	</div>
+
+
+<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
+
+
+	
 	
 	<div class="body">
 		<br>

@@ -32,30 +32,26 @@ public class MenuController {
 		return new ModelAndView("menu", "items", list);
 	}
 
-	
 	@RequestMapping("/addCartItem")
 	public ModelAndView addToCart(@RequestParam("id") int menuItemId) {
-	  MenuItem m = menuItemDao.findById(menuItemId);
-	  CartItem c = new CartItem();
-	  c.setQuantity(1);
-	  c.setMenuItem(m);
-	  cartItemDao.create(c);
-	  return new ModelAndView("redirect:/cartItem");
+		MenuItem m = menuItemDao.findById(menuItemId);
+		CartItem c = new CartItem();
+		c.setQuantity(1);
+		c.setMenuItem(m);
+		cartItemDao.create(c);
+		return new ModelAndView("redirect:/cartItem");
 	}
-	
-
 
 	@RequestMapping("/cartItem")
 	public ModelAndView viewCart() {
 		List<CartItem> list = cartItemDao.findAll();
 		return new ModelAndView("cartItem", "cartItems", list);
 	}
-	
+
 	@RequestMapping("/deleteFromCart")
 	public ModelAndView deleteFromCart(@RequestParam("id") int id) {
 		cartItemDao.deleteCartItem(id);
 		return new ModelAndView("redirect:/cartItem");
 	}
-	
 
 }

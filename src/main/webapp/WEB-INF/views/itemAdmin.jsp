@@ -12,15 +12,16 @@
 <meta charset="UTF-8">
 <title>Item Admin</title>
 <link rel="stylesheet" href="/style.css" />
-<span>
-			Hello ${ profile.first_name } ${ profile.last_name }
-		</span>
+
 </head>
 <body>
-	<div class="header">
+	<div class="headz">
 		<h1>GC COFFEE</h1>
 
 	</div>
+	<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
 	<div class= "body">
 	<h2>Item Admin Menu</h2>
 	

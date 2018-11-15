@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-<div class = "header">
+<div class = "headz">
   <h1>GC COFFEE</h1>
   
 </div>

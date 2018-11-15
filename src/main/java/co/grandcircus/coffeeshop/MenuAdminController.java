@@ -11,10 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MenuAdminController {
-	
+
 	@Autowired
 	private MenuItemDao menuItemDao;
-	
+
 	@RequestMapping("/itemAdmin")
 	public ModelAndView showItemAdmin() {
 		List<MenuItem> list = menuItemDao.findAll();
@@ -32,7 +32,6 @@ public class MenuAdminController {
 		menuItemDao.create(item);
 		return new ModelAndView("redirect:/itemAdmin");
 	}
-
 
 	@RequestMapping("/edit")
 	public ModelAndView showEditForm(@RequestParam("id") int id) {
@@ -55,8 +54,5 @@ public class MenuAdminController {
 		menuItemDao.delete(id);
 		return new ModelAndView("redirect:/itemAdmin");
 	}
-	
-	
-	
 
 }
