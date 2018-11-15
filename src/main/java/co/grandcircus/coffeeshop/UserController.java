@@ -56,7 +56,7 @@ public class UserController {
 	@RequestMapping("/logout")
 	public ModelAndView logout(HttpSession session, RedirectAttributes redir) {
 		session.invalidate();
-		redir.addFlashAttribute("message", "You've logged out");
+		redir.addFlashAttribute("message", "You've logged out, Thanks for visiting!");
 		return new ModelAndView("redirect:/");
 	}
 

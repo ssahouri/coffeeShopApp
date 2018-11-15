@@ -32,13 +32,14 @@
 	<div class="body">
 		<br>
 		<h2>Welcome to GC Coffee!</h2>
+		<p class="message">${ message }</p>
 	<div class = "links">
 
-		<a class="btn btn-light" href="/userRegistration" role="button">Click
-			here to register!</a> <a class="btn btn-light" href="/menu" role="button">View
-			Menu!</a> <a class="btn btn-light" href="/itemAdmin" role="button">Admin
-			Menu!</a>
-			<a class="btn btn-light" href="/login" role="button">Log In!</a><a class="btn btn-light" href="/logout">Logout</a>
+		<a class="btn btn-light" href="/userRegistration" role="button">Register</a> 
+		<a class="btn btn-light" href="/menu" role="button">View Menu</a> 
+		<a class="btn btn-light" href="/itemAdmin" role="button">Admin Menu</a>
+			<a class="btn btn-light" href="/login" role="button">Log In</a>
+			<a class="btn btn-light" href="/logout">Logout</a>
 </div>
 	</div>
 
