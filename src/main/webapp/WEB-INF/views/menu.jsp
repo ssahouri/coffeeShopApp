@@ -13,6 +13,9 @@
 <meta charset="UTF-8">
 <title>Menu</title>
 <link rel="stylesheet" href="/style.css" />
+<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
 </head>
 
 <body>

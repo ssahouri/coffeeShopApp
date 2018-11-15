@@ -10,6 +10,9 @@
 <meta charset="UTF-8">
 <title>Home</title>
 <link rel="stylesheet" href="/style.css" />
+	<span>
+			Hello ${ profile.first_name } ${ profile.last_name }
+		</span>
 </head>
 <body>
 
@@ -27,6 +30,7 @@
 			here to register!</a> <a class="btn btn-light" href="/menu" role="button">View
 			Menu!</a> <a class="btn btn-light" href="/itemAdmin" role="button">Admin
 			Menu!</a>
+			<a class="btn btn-light" href="/login" role="button">Log In!</a><a class="btn btn-light" href="/logout">Logout</a>
 </div>
 	</div>
 
