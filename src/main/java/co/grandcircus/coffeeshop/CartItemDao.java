@@ -32,7 +32,7 @@ public class CartItemDao {
 		em.persist(cartItem);
 	}
 	
-	public void delete(long id) {
+	public void deleteCartItem(long id) {
 		CartItem cartItem = em.getReference(CartItem.class, id);
 		em.remove(cartItem);
 	}

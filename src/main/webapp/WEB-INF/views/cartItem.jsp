@@ -46,7 +46,7 @@
 					<td><jsp:text>
   						$${cartItem.quantity * cartItem.menuItem.price}
 							</jsp:text></td>
-							<td><a class="btn btn-danger" href="/delete?id=${cartItem.id }">Delete</a></td>
+							<td><a class="btn btn-danger" href="/deleteFromCart?id=${cartItem.id }">Delete</a></td>
 
 				</tr>
 			</c:forEach>

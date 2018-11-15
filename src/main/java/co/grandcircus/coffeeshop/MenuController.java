@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -33,20 +32,15 @@ public class MenuController {
 		return new ModelAndView("menu", "items", list);
 	}
 
+	
 	@RequestMapping("/addCartItem")
-	public ModelAndView showAddCartItem(@RequestParam("id") int id) {
-		ModelAndView mav = new ModelAndView("addCartItem");
-		mav.addObject("item", menuItemDao.findById(id));
-		mav.addObject("title", "Add Item");
-		return mav;
-
-	}
-
-	// same URL but different method
-	@RequestMapping(value = "/addCartItem", method = RequestMethod.POST)
-	public ModelAndView submitAddCartItem(CartItem item) {
-		cartItemDao.create(item);
-		return new ModelAndView("redirect:/cartItem");
+	public ModelAndView addToCart(@RequestParam("id") int menuItemId) {
+	  MenuItem m = menuItemDao.findById(menuItemId);
+	  CartItem c = new CartItem();
+	  c.setQuantity(1);
+	  c.setMenuItem(m);
+	  cartItemDao.create(c);
+	  return new ModelAndView("redirect:/cartItem");
 	}
 	
 
@@ -56,5 +50,12 @@ public class MenuController {
 		List<CartItem> list = cartItemDao.findAll();
 		return new ModelAndView("cartItem", "cartItems", list);
 	}
+	
+	@RequestMapping("/deleteFromCart")
+	public ModelAndView deleteFromCart(@RequestParam("id") int id) {
+		cartItemDao.deleteCartItem(id);
+		return new ModelAndView("redirect:/cartItem");
+	}
+	
 
 }

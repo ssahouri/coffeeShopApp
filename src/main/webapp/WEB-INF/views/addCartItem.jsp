@@ -23,7 +23,7 @@
 	</div>
 	<div class="container">
 		<h1>Add Item to Cart</h1>
-		<form action="/cartItem?id=${item.id }" method="post">
+		<form action="/addCartItem?id=${item.id }" method="post">
 		<table class="table">
 			<tr>
 				<th scope="row">Quantity</th>
